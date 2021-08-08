@@ -19,31 +19,41 @@
 * Clone this project:
 
 ```
-	git clone https://github.com/0xb4c/SET.git
+git clone https://github.com/0xb4c/SET.git
 ```
 
 * Move to SET folder:
 
-```cd SET```
+```
+cd SET
+```
 
 * Install dependencies:
 
-`pip3 install requirements.txt`
+```
+pip3 install requirements.txt
+```
 
 
 ## How-to-use
 
 * To list all the basic options, use -h:
 
-`python3 set.py -h`
+```
+python3 set.py -h
+```
 
 * To enumerate all subdomains of a specific domain, use -d/--domain:
 
-`python3 set.py -d <url>`
+```
+python3 set.py -d <url>
+```
 
 * To save results to a csv file, use -o/--output:
 
-`python3 set.py -o -d <url>`
+```
+python3 set.py -o -d <url>
+```
 
 
 ## Examples
