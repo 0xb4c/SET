@@ -16,11 +16,18 @@
 
 ## Installation
 
-```
-$ git clone https://github.com/0xb4c/SET.git
-$ cd SET
-$ pip3 install requirements.txt
-```
+* Clone this project:
+
+`git clone https://github.com/0xb4c/SET.git`
+
+* Move to SET folder:
+
+`cd SET`
+
+* Install dependencies:
+
+`pip3 install requirements.txt`
+
 
 ## How-to-use
 
