@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/SET_logo.png" alt="Logo" width="80" height="80">
     <h3 align="center">SET - Subdomain Enumeration Tool</h3>
 
   <p align="center">
