@@ -18,11 +18,13 @@
 
 * Clone this project:
 
-`git clone https://github.com/0xb4c/SET.git`
+```
+	git clone https://github.com/0xb4c/SET.git
+```
 
 * Move to SET folder:
 
-`cd SET`
+```cd SET```
 
 * Install dependencies:
 
