@@ -25,19 +25,25 @@ $ pip3 install requirements.txt
 ## How-to-use
 
 * To list all the basic options, use -h:
+
 `python3 set.py -h`
 
 * To enumerate all subdomains of a specific domain, use -d/--domain:
+
 `python3 set.py -d <url>`
 
 * To save results to a csv file, use -o/--output:
+
 `python3 set.py -o -d <url>`
 
 
 ## Examples
 * Enumerate  all subdomains of a specific domain
+
 ![](images/SET_enum.png)
+
 * Enumerate  all subdomains of a specific domain, save results to a csv file
+
 ![](images/SET_save.png)
 
 ## Acknowledgements
