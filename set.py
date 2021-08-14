@@ -21,6 +21,17 @@ class SET():
         self.error = 1
         self.subdlist_1 = []
         self.subdlist_2 = []
+    
+    def standardize_domain_format(self, _domain):
+        print("[+] Standardize domain format...")
+        if ('http://' in _domain):
+            _domain = _domain.replace('http://', '')
+        elif ('https://' in _domain):
+            _domain = _domain.replace('https://', '')
+        if ('www.' in _domain):
+            _domain = _domain.replace('www.', '')
+        print("     -> ", _domain)
+        return _domain
 
     def request_dns_dumpster(self, _domain):
         print("[+] Extracting information with DNSdumpster...")
@@ -114,15 +125,16 @@ if __name__ == '__main__':
     args = parser.parse_args()
     if (args.domain):
         _subdenum = SET()
-        dnsdumpster_res, error_res = _subdenum.request_dns_dumpster(args.domain)
+        _domain = _subdenum.standardize_domain_format(args.domain)
+        dnsdumpster_res, error_res = _subdenum.request_dns_dumpster(_domain)
         #if not error_res:
         #    print(dnsdumpster_res)
-        sublist3r_res, error_res = _subdenum.request_sublist3r(args.domain)
+        sublist3r_res, error_res = _subdenum.request_sublist3r(_domain)
         #if not error_res:
         #    print(sublist3r_res)
         final_res = _subdenum.merge_results(dnsdumpster_res, sublist3r_res)
         if (args.output):
-            if (_subdenum.save_results(args.domain, final_res)):
+            if (_subdenum.save_results(_domain, final_res)):
                 print(Fore.GREEN + "     '-> Done!")
             else:
                 print(Fore.RED + "     '-> ERROR. Cannot save into this file!")
